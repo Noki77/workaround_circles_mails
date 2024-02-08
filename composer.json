@@ -1,0 +1,15 @@
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/nextcloud/circles.git"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "nextcloud/ocp": "^28.0",
+        "nextcloud/circles": "^28.0"
+    }
+}

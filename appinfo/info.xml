@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>workaround_circles_mails</id>
+    <name>Circles Mail Workaround</name>
+    <description>Changes email messages caused by circle sharing to include proper sender name instead of "someone"</description>
+    <version>1.0.0</version>
+    <licence>MIT</licence>
+    <author>Justin Vogel</author>
+    <category>customization</category>
+    <bugs>https://github.com/Noki77/nc-circle-mail-workaround/issues</bugs>
+    <namespace>WCM</namespace>
+    <dependencies>
+        <nextcloud min-version="25"/>
+    </dependencies>
+</info>
