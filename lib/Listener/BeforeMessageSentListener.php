@@ -25,6 +25,14 @@ class BeforeMessageSentListener implements IEventListener {
         $msg = $event->getMessage();
         $userDisplayName = Application::getDispatchingUser()->getDisplayName();
         if ($msg instanceof \OC\Mail\Message && str_contains($msg->getSubject(), "someone")) {
+            $from = $msg->getFrom();
+            foreach ($from as $senderAddress => $sender) {
+                if (str_contains($sender, "someone")) {
+                    $from[$senderAddress] = str_replace("someone", $userDisplayName, $sender);
+                }
+            }
+            $msg->setFrom($from);
+
             $msg->setSubject(str_replace("someone", $userDisplayName, $msg->getSubject()));
             $msg->setPlainBody(str_replace("someone", $userDisplayName, $msg->getPlainBody()));
 
